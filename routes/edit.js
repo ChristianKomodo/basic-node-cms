@@ -15,7 +15,7 @@ router.post('/', function (req, res) {
     'heading': req.body.heading,
     'content': req.body.content
   }
-  // Read contents from site-data.json and send with page to be rendered
+  // Write contents to site-data.json and redirect back to homepage
   fs.writeFile("site-data.json", JSON.stringify(newPageContent), (err, data) => {
     if (err) console.log(err);
     res.redirect('/');
