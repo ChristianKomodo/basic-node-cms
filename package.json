@@ -1,18 +1,30 @@
 {
-  "name": "node-write-to-json",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "node-sass-middleware": "0.11.0"
-  }
+	"name": "node-write-to-json",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "npm run sass && npm run sass:watch && node ./bin/www",
+		"sass": "node-sass -w -r public/stylesheets -o public/stylesheets",
+		"sass:watch": "npm run sass && npm run sass -- --watch --recursive"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.1",
+		"cookie-parser": "^1.4.6",
+		"debug": "^4.3.3",
+		"ejs": "^3.1.6",
+		"express": "^4.17.2",
+		"http-errors": "^2.0.0",
+		"morgan": "^1.10.0",
+		"node-sass": "^7.0.1"
+	},
+	"old": {
+		"body-parser": "^1.19.0",
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"ejs": "~2.6.1",
+		"express": "~4.16.1",
+		"http-errors": "~1.6.3",
+		"morgan": "~1.9.1",
+		"node-sass-middleware": "0.11.0"
+	}
 }
