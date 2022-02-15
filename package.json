@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"start": "npm run sass && npm run sass:watch && node ./bin/www",
+		"start": "npm run sass:watch & echo \"Flip Mode is the greatest.\" && node ./bin/www",
 		"sass": "node-sass -w -r public/stylesheets -o public/stylesheets",
 		"sass:watch": "npm run sass && npm run sass --watch --recursive"
 	},
